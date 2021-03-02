@@ -1,0 +1,83 @@
+{% extends 'registrasiKTP/base.html' %}
+{% block content %}
+<h1> Isian KTP Sukses </h1>
+<h2>Haturnuhun Paritipasi</h2>
+<br><br>
+<h3> Inilah Penampakan KTP Virtual Anda </h3>
+
+{%  for isianKTP in isianKTP %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Photo</th>
+        <th scope="col">Data Pribados</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+
+        <td><img src="{{isianKTP.images.url}}" alt="..." class="img-thumbnail"></td>
+        <td>
+          <table class="table">
+            <thead>
+            <tr>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+
+              <td>Nomor NIK</td>
+              <td>{{isianKTP.nomor_NIK}}</td>
+
+            </tr>
+            <tr>
+
+              <td>Nama Lengkap</td>
+              <td>{{isianKTP.nama_lengkap}}</td>
+
+            </tr>
+            <tr>
+
+              <td>Jenis Kelamin</td>
+              <td>{{isianKTP.jenis_kelamin}}</td>
+
+            </tr>
+
+            <tr>
+
+              <td>Tanggal Lahir</td>
+              <td>{{isianKTP.tanggal_lahir}}</td>
+
+            </tr>
+            <tr>
+
+              <td>Agama</td>
+              <td>{{isianKTP.agama}}</td>
+
+            </tr>
+            <tr>
+
+              <td>Status</td>
+              <td>{{isianKTP.status_nikah}}</td>
+
+            </tr>
+
+            </tbody>
+          </table></td>
+
+      </tr>
+
+
+    </tbody>
+  </table>
+
+{% endfor %}
+
+<a href="/">
+
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">PARANTOS JANTEN!</button>
+</a>
+
+{% endblock %}
